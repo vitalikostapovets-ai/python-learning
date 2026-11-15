@@ -25,7 +25,10 @@ while True:
           total = int(input("Скільки всього адрес на маршруті?"))
           delivered = int(input("Скільки адрес уже закрито?"))
           remaining = total - delivered
-          print("Залишилось адрес:", remaining)
+          if remaining == 0:
+              print("Маршрут завершено!")
+          else:
+              print("Залишилось адрес:", remaining)
     elif command == "вихід":
          print("До зустрічі!")
          break
