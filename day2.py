@@ -7,3 +7,8 @@ if age >= 18:
 else:
     print("hello,", name)
     print("You are under 18.")
+minutes = int(input("How many minutes did you learn Python today?"))
+if minutes >=45:
+    print("Good job!")
+else:
+    print("Keep learning!")
