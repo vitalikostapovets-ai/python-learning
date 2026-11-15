@@ -21,7 +21,12 @@ while True:
          task = input("Яку справу додати? ")
          tasks.append(task)
          print("Справу додано!")
-     elif command == "вихід":
+    elif command == "маршрут":
+          total = int(input("Скільки всього адрес на маршруті?"))
+          delivered = int(input("Скільки адрес уже закрито?"))
+          remaining = total - delivered
+          print("Залишилось адрес:", remaining)
+    elif command == "вихід":
          print("До зустрічі!")
          break
 
