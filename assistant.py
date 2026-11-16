@@ -4,6 +4,7 @@ print("Привіт,", name)
 print("Я твій простий асистент.")
 
 tasks = []
+last_remaining = None
 while True:
     command = input("Введи команду:").lower().strip()
 
@@ -28,9 +29,16 @@ while True:
           if delivered > total:
               print("Перевір числа: закритих адрес більше, ніж усього на маршруті.")
           elif remaining == 0:
+              last_remaining = remaining
               print("Маршрут завершено!")
           else:
+              last_remaining = remaining
               print("Залишилось адрес:", remaining)
+    elif command == "статус":
+        if last_remaining is None: 
+            print("Спочатку введи команду маршрут.")
+        else:
+            print("Останній залишок адрес:", last_remaining)
     elif command == "вихід":
          print("До зустрічі!")
          break
