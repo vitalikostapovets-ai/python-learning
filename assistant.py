@@ -37,12 +37,14 @@ while True:
     elif command == "статус":
         if last_remaining is None: 
             print("Спочатку введи команду маршрут.")
+        elif last_remaining == 0:
+            print("Маршрут завершено!")
         else:
             print("Останній залишок адрес:", last_remaining)
     elif command == "вихід":
          print("До зустрічі!")
          break
-
+МА
     else:
         print("Я поки не знаю такої команди.")
 
