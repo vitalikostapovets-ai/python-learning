@@ -1,3 +1,4 @@
+
 name = input("Як тебе звати ?")
 
 print("Привіт,", name)
@@ -34,6 +35,7 @@ while True:
           else:
               last_remaining = remaining
               print("Залишилось адрес:", remaining)
+
     elif command == "статус":
         if last_remaining is None: 
             print("Спочатку введи команду маршрут.")
@@ -41,10 +43,18 @@ while True:
             print("Маршрут завершено!")
         else:
             print("Останній залишок адрес:", last_remaining)
+    elif command == "доставлено":
+        if last_remaining is None: 
+            print("Спочатку введи команду маршрут.")
+        elif last_remaining == 0:
+            print("Маршрут завершено!")
+        else:
+            last_remaining = last_remaining - 1
+            print("Залишилось адрес:", last_remaining)
     elif command == "вихід":
          print("До зустрічі!")
          break
-МА
+
     else:
         print("Я поки не знаю такої команди.")
 
