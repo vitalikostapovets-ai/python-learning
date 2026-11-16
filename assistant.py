@@ -16,7 +16,7 @@ while True:
         print("У мене все добре. Готовий працювати!")
 
     elif command == "допомога":
-        print("Команди: привіт, як справи,список справ,додати справу,маршрут,статус, допомога, вихід")
+        print("Команди: привіт, як справи,список справ,додати справу,маршрут,статус,додати адресу, допомога, вихід")
     elif command == "список справ":
         print(tasks)
     elif command == "додати справу":
@@ -51,6 +51,13 @@ while True:
         else:
             last_remaining = last_remaining - 1
             print("Залишилось адрес:", last_remaining)
+    elif command == "додати адресу":
+        if last_remaining is None:
+            print("Спочатку введи команду маршрут.")
+        else:
+            last_remaining = last_remaining + 1
+            print("Залишилось адрес:", last_remaining)
+
     elif command == "вихід":
          print("До зустрічі!")
          break
